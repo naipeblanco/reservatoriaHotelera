@@ -58,13 +58,13 @@ namespace ReservaHotel
             }
         }
 
-        public void Actualiza(String id_equipo,String nombre, String web, String ciudad)
+        public void Actualiza(String dni,String nombre, String web, String ciudad)
         {
 
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("UPDATE equipos SET nombre = '"+ nombre +"',web = '" + web + "' ciudad = '" + ciudad+ " WHERE id= '" + id_equipo+ "'" , conexion);
+                MySqlCommand consulta = new MySqlCommand("UPDATE equipos SET nombre = '"+ nombre +"',web = '" + web + "' ciudad = '" + ciudad+ " WHERE dni = '" + dni + "'" , conexion);
                 consulta.ExecuteNonQuery();
                 conexion.Close();
 

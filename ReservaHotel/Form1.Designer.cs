@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.eventLog1 = new System.Diagnostics.EventLog();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.axCalendar21 = new AxCALENDARLib2.AxCalendar2();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axCalendar21)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,26 +51,9 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 3;
             // 
-            // tabControl1
+            // eventLog1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(13, 13);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(775, 425);
-            this.tabControl1.TabIndex = 4;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.monthCalendar1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(767, 399);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "INSERTAR";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.eventLog1.SynchronizingObject = this;
             // 
             // tabPage2
             // 
@@ -75,13 +62,38 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(767, 399);
             this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Habitacion";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // monthCalendar1
+            // tabControl1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(9, 9);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 0;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(13, 14);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(775, 425);
+            this.tabControl1.TabIndex = 4;
+            // 
+            // axCalendar21
+            // 
+            this.axCalendar21.Enabled = true;
+            this.axCalendar21.Location = new System.Drawing.Point(251, 0);
+            this.axCalendar21.Name = "axCalendar21";
+            this.axCalendar21.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axCalendar21.OcxState")));
+            this.axCalendar21.Size = new System.Drawing.Size(513, 399);
+            this.axCalendar21.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.axCalendar21);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(767, 399);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "DIA";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -93,7 +105,9 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axCalendar21)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -101,10 +115,11 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Diagnostics.EventLog eventLog1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private AxCALENDARLib2.AxCalendar2 axCalendar21;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
 

@@ -37,7 +37,7 @@ namespace ReservaHotel
             conexion = new MySqlConnection("Server = 127.0.0.1; Database = reservas; Uid = root; Pwd =root; Port = 3306");
             conexion.Open();
 
-            comando = new MySqlCommand("Select * from equipos", conexion);
+            comando = new MySqlCommand("Select * from clientes", conexion);
             resultado = comando.ExecuteReader();
         
             datos.Load(resultado);
